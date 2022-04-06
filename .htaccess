@@ -1,0 +1,9 @@
+#Options All - Indexes
+# redirige URL AMIGABLE
+RewriteEngine On  
+# DIRECTORIO VALIDO                          
+RewriteCond %{REQUEST_FILENAME} !-d  
+# ARCHIVO VALIDO      
+RewriteCond %{REQUEST_FILENAME} !-f 
+# REDIRIGE        
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L] 
